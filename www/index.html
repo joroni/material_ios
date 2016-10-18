@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Android - IOS</title>
+  <link rel="stylesheet" href="css/onsenui.css">
+  <link rel="stylesheet" href="css/onsen-css-components.css">
+
+  <script src="js/onsenui.js"></script>
+  <script src="js/jquery1.11.js"></script>
+  <script src="js/alert.js"></script>
+  <script src="js/app.js"></script>
+
+  <style>
+    ons-splitter-side[side="left"] {
+      border-right: 1px solid #ddd;
+    }
+
+    ons-splitter-side[side="right"] {
+      border-left: 1px solid #ddd;
+    }
+  </style>
+
+  <script>
+    function toggle(side) {
+      var side = document.querySelector('ons-splitter-side[side="' + side + '"]');
+
+      side.toggle();
+    }
+
+
+    ons.ready(function() {
+      myNavigator.pushPage('pages/home.html');
+    });
+
+     
+  </script>
+
+</head>
+
+<body>
+
+
+
+  <ons-splitter>
+    <ons-splitter-side side="left" width="200px" collapse swipeable>
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">content</div>
+        </ons-toolbar>      
+          <ons-list-item onclick="myNavigator.pushPage('pages/home.html')"  tappable>Home</ons-list-item>
+          <ons-list-item onclick="myNavigator.pushPage('pages/page1.html')"  tappable>Page 1</ons-list-item>
+          <ons-list-item onclick="myNavigator.pushPage('pages/alert.html')"  tappable>Alert</ons-list-item>
+          <ons-list-item onclick="myNavigator.pushPage('pages/button.html')"  tappable>Button</ons-list-item>
+
+      </ons-page>
+
+    </ons-splitter-side>
+
+    <ons-splitter-content>
+    <ons-navigator id="myNavigator">   
+      <!-- custom pages-->
+      <!--ons-page><script src="js/gesture.js"></script><ons-template id="pages/gesture.html"></ons-template></ons-page-->        
+      <!-- custom pages-->
+      </ons-navigator>        
+    </ons-splitter-content>
+
+
+
+    <ons-splitter-side side="right" width="300px" collapse swipeable threhold-ratio-should-open="0.4">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="toggle('right')">Close</ons-toolbar-button>
+          </div>
+          <div class="center">ons-splitter-side</div>
+        </ons-toolbar>
+
+      </ons-page>
+    </ons-splitter-side>
+  </ons-splitter>
+
+</body>
+</html>
