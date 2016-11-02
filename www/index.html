@@ -5,11 +5,14 @@
   <title>Android - IOS</title>
   <link rel="stylesheet" href="css/onsenui.css">
   <link rel="stylesheet" href="css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <script src="js/onsenui.js"></script>
   <script src="js/jquery1.11.js"></script>
   <script src="js/alert.js"></script>
   <script src="js/app.js"></script>
+  <script src="cordova.js"></script>
+  
 
   <style>
     ons-splitter-side[side="left"] {
@@ -46,9 +49,11 @@
     <ons-splitter-side side="left" width="200px" collapse swipeable>
       <ons-page>
         <ons-toolbar>
-          <div class="center">content</div>
-        </ons-toolbar>      
+          <div class="center">PAGES</div>
+        </ons-toolbar>     
+
           <ons-list-item onclick="myNavigator.pushPage('pages/home.html')"  tappable>Home</ons-list-item>
+          <ons-list-item onclick="myNavigator.pushPage('pages/login.html')"  tappable>Login</ons-list-item>
           <ons-list-item onclick="myNavigator.pushPage('pages/page1.html')"  tappable>Page 1</ons-list-item>
           <ons-list-item onclick="myNavigator.pushPage('pages/alert.html')"  tappable>Alert</ons-list-item>
           <ons-list-item onclick="myNavigator.pushPage('pages/button.html')"  tappable>Button</ons-list-item>
@@ -65,20 +70,69 @@
       <!-- custom pages-->
       <!--ons-page><script src="js/gesture.js"></script><ons-template id="pages/gesture.html"></ons-template></ons-page-->        
       <!-- custom pages-->
-      </ons-navigator>        
+      </ons-navigator>  
+
+ 
+
     </ons-splitter-content>
 
 
 
     <ons-splitter-side side="right" width="300px" collapse swipeable threhold-ratio-should-open="0.4">
       <ons-page>
-        <ons-toolbar>
-          <div class="left">
-            <ons-toolbar-button onclick="toggle('right')">Close</ons-toolbar-button>
-          </div>
-          <div class="center">ons-splitter-side</div>
-        </ons-toolbar>
 
+      <ons-toolbar>
+        <div class="left"><ons-toolbar-button onclick="toggle('right')">Close</ons-toolbar-button></div>
+        <div class="center">Profile</div>
+        <div class="right">
+         
+        </div>
+      </ons-toolbar>
+
+      <div class="profile-card">
+
+        <img src="img/5388738458_ea9fd2a7d7_q.jpg" class="profile-image">
+        <div class="profile-name">Dave Graham</div>
+        <div class="profile-id">@davegraham</div>
+        <div class="profile-desc">Freelance designer, software engineer and cyclist</div>
+
+      </div>
+
+      <ons-list>
+        <ons-list-item>
+          <ons-row>
+            <ons-col class="info-col">
+              <div class="info-num">87</div>
+              <div class="info-unit">Comments</div>
+            </ons-col>
+            <ons-col class="info-col">
+              <div class="info-num">40</div>
+              <div class="info-unit">Following</div>
+            </ons-col>
+            <ons-col class="info-col">
+              <div class="info-num">38</div>
+              <div class="info-unit">Followers</div>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+      <ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item modifier="chevron">
+          Write a comment
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron">
+          See details
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron">
+          Save to the list
+        </ons-list-item>
+
+      </ons-list>
+
+      <br>
       </ons-page>
     </ons-splitter-side>
   </ons-splitter>
