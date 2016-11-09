@@ -2,19 +2,46 @@
   <name>Material_IOS</name>
   <description>Material_IOS</description>
   <author href="http://test.com" email="test.com">Material_IOS</author>
-  <content src="index.html"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="android-minSdkVersion" value="14"/>
-  <preference name="phonegap-version" value="cli-6.3.0" />
-<preference name="SplashScreen" value="screen"/>
-<preference name="splashScreenDelay" value="5000" />
 
-  <!-- all platforms -->
-  <preference name="phonegap-version" value="cli-6.0.0" />
-  <preference name="orientation" value="portrait" />
-  <preference name="fullscreen" value="true" />
 
-    
+
+    <content src="index.html"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="android-minSdkVersion" value="14"/>
+
+    <preference name="SplashScreen" value="screen"/>
+    <preference name="splashScreenDelay" value="5000" />
+
+    <!-- all platforms -->
+
+    <preference name="fullscreen" value="false" />
+
+
+    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="permissions" value="none"/>
+    <preference name="orientation" value="both"/>
+    <preference name="target-device" value="universal"/>
+
+    <preference name="webviewbounce" value="true"/>
+    <preference name="prerendered-icon" value="true"/>
+    <preference name="stay-in-webview" value="false"/>
+    <preference name="ios-statusbarstyle" value="black-opaque"/>
+    <preference name="detect-data-types" value="true"/>
+    <preference name="exit-on-suspend" value="false"/>
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#03CCB9"/>
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="show-splash-screen-spinner" value="false"/>
+    <preference name="auto-hide-splash-screen" value="false"/>
+    <preference name="disable-cursor" value="false"/>
+    <preference name="splashscreen" value="splash" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="android-installLocation" value="auto"/>
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+
+ 
+
+
   
   <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1"/>
   <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1"/>
@@ -120,4 +147,5 @@
     <allow-intent href="*" />
     <access origin="*" /> <!-- Required for iOS9 -->
   </platform>
+   <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
 </widget>

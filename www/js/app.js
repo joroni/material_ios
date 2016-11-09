@@ -2,7 +2,10 @@
 
 ons.ready(function() {
 	console.log('Ready!');
-	//window.open = cordova.InAppBrowser.open;  
+    StatusBar.overlaysWebView( true );
+    StatusBar.show();
+    StatusBar.backgroundColorByHexString('#03CCB9');
+    StatusBar.styleLightContent('lightcontent');	
 });
 
 
